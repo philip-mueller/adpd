@@ -1,0 +1,6 @@
+defaults:
+  - BackboneTransformerEncoder
+  - resnet50@backbone
+
+encoder_layers: 1
+shortcut_pos_embeddings: true

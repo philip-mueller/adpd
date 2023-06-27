@@ -1,0 +1,7 @@
+nih8_cig:
+  - nih/Atelectasis
+  - nih/Cardiomegaly
+  - nih/Effusion
+  - nih/Infiltration
+  - nih/Pneumonia
+  - nih/Pneumothorax

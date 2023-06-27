@@ -1,0 +1,10 @@
+cig9:
+  - cig_anatomicalfinding/lung opacity
+  - cig_anatomicalfinding/pleural effusion
+  - cig_anatomicalfinding/atelectasis
+  - cig_anatomicalfinding/enlarged cardiac silhouette
+  - cig_anatomicalfinding/pulmonary edema/hazy opacity
+  - cig_anatomicalfinding/pneumothorax
+  - cig_anatomicalfinding/consolidation
+  - cig_disease/fluid overload/heart failure
+  - cig_disease/pneumonia

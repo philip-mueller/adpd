@@ -1,0 +1,32 @@
+defaults:
+  - AnatObservationClassifier
+  - /model/img_encoder@image_encoder: densenet121
+  - /model/detector@detector: TokenDecoderDetector 
+
+d_model: 256
+n_cls_hidden_layers: 0
+d_classifier_hidden: null
+
+mil_loss_fn: asl 
+mil_loss_args:
+  loss_coeff: 0.01
+mil_aggregation: lse
+
+# None, top1perclass, nms
+box_postprocessing: top1perclass
+nms_iou_threshold: 0.5
+
+detector:
+  n_joint_encoder_layers: 0
+  n_decoder_layers: 1
+  n_output_encoder_layers: 0
+  # 0 = no projection, 1 = linear, 2 = one hidden layer
+  n_feature_mlp_layers: 0
+
+  enc_dec_droppath: false
+  decoder_sa: true
+  decoder_ff: true
+  shortcut_tokens: true
+  use_pos_embeddings: true
+  shortcut_pos_embeddings: true
+ 

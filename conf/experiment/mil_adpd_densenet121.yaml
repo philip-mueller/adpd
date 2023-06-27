@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - /model/observation_classifier@model: mil_adpd_densenet121
+  - /dataset@train_dataset: 
+    - mimic_anatlabel_cigall
+  - /dataset@val_dataset: 
+    - nih8_bboxes
+  - /dataset@eval_datasets: 
+    - nih8_bboxes
+    - mimic_anatlabel_cigall
+  - /dataset/anatomy_names@model.learned_anatomy_names: cig_default
+  - /dataset/observation_sets@model.learned_observation_groups: cig_all
+  - _self_
+  
+lr: 1e-4
+weight_decay: 1e-4
+
+name: mil_adpd

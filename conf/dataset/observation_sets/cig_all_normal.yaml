@@ -1,0 +1,74 @@
+- observation_set_name: cig_anatomicalfinding
+  anatomy_observation_set_name: anat_anatomicalfinding
+  observation_names: 
+  - atelectasis
+  - vascular calcification
+  - vascular congestion
+  - lung opacity
+  - mediastinal displacement
+  - pleural effusion
+  - enlarged cardiac silhouette
+  - rib fracture
+  - hernia
+  - airspace opacity
+  - pleural/parenchymal scarring
+  - enlarged hilum
+  - subcutaneous air
+  - hyperaeration
+  - pulmonary edema/hazy opacity
+  - lung lesion
+  - mass/nodule (not otherwise specified)
+  - tortuous aorta
+  - linear/patchy atelectasis
+  - consolidation
+  - spinal degenerative changes
+  - pneumothorax
+  - calcified nodule
+  - scoliosis
+  - superior mediastinal mass/enlargement
+  - elevated hemidiaphragm
+  - multiple masses/nodules
+  - infiltration
+  - mediastinal widening
+  - shoulder osteoarthritis
+  - vascular redistribution
+  - costophrenic angle blunting
+  - lobar/segmental collapse
+  - hydropneumothorax
+  - spinal fracture
+  - bone lesion
+  - increased reticular markings/ild pattern
+  - pneumomediastinum
+  - diaphragmatic eventration (benign)
+  - sub-diaphragmatic air
+  - cyst/bullae
+  - bronchiectasis
+  - clavicle fracture
+# 43
+  has_bboxes: false
+  has_anatomy_observations: true
+
+- observation_set_name: cig_disease
+  anatomy_observation_set_name: anat_disease
+  observation_names: 
+  - pneumonia
+  - pericardial effusion
+  - copd/emphysema
+  - fluid overload/heart failure
+  - granulomatous disease
+  - goiter
+  - aspiration
+  - lung cancer
+  - alveolar hemorrhage
+  - interstitial lung disease
+# 10
+  has_bboxes: false
+  has_anatomy_observations: true
+
+- observation_set_name: cig
+  anatomy_observation_set_name: anat
+  observation_names: 
+  - normal
+
+  has_bboxes: false
+  has_anatomy_observations: true

@@ -1,0 +1,89 @@
+defaults:
+  - ExperimentConfig
+  - _self_
+
+seed: 42
+
+transform: 
+  train_mode: keepbbox_random_crop
+  train_size: [224, 224]
+  crop_scale_range: [0.9, 1.0]
+  min_visibility: 0.00
+  erosion_rate: 0.2
+
+  val_mode: rect_center
+  val_size: null
+
+  # Horizontal flip
+  random_horizontal_flip: false
+  horizontal_flip_prob: 0.5
+
+  # Random affine transformation
+  random_affine: true
+  affine_prob: 1.0
+  rotation_angle_range: [-2, 2]
+  translation_fraction_yx: [-0.02, 0.02]
+  scaling_range: [0.95, 1.0]
+
+  # Random jitter
+  random_jitter: true
+  jitter_prob: 1.0  # 0.5
+  brightness_jitter_ratio_range: [0.8, 1.2]
+  contrast_jitter_ratio_range: [0.8, 1.2]
+  
+  # Elastic deformation
+  elastic_deformation: false
+  elastic_deformation_prob: 0.1
+  elastic_deformation_alpha: 1
+  elastic_deformation_sigma: 50
+  elasitc_defomration_alpha_affine: 50
+
+  # Gaussian blurring
+  gaussian_blur: true
+  gaussian_blur_prob: 0.5
+  gaussian_blur_sigma_range: [0.1, 1.0]
+
+batch_size: 128
+max_steps: null 
+max_epochs: 25
+warmup_lr: 0.0
+min_lr: 0.0 
+warmup_steps: 3000
+accumulation_steps: 1
+grad_clip_norm: 5.0
+early_sopping_patience: 20000
+
+metric: patho_detect/mAP
+metric_mode: max
+
+train: true
+evaluate: true
+eval_mode: test
+
+val_freq: 500
+print_freq: 50
+num_workers: ${oc.env:NUM_WORKERS,10}
+prefetch: ${oc.env:IMG_PREFETCH,false}
+device: cuda
+debug: false
+save_components: []
+
+plot_wandb: true
+plot_val_batches: 1
+
+hydra:
+  job:
+    name: ${name}
+    config:
+      override_dirname:
+        kv_sep: __
+        item_sep: /
+        exclude_keys: [experiment, name, gpu, print_freq, val_freq, debug, resume,
+                       training.num_workers, training.prefetch, plot_wandb, plot_val_batches, save_components]
+
+  run:
+    dir: ${ifel:${debug},debug_logs,${models_dir:}}/${name}/${hydra.job.override_dirname}/run_${now:%Y-%m-%d_%H-%M-%S}
+
+  sweep:
+    dir: ${ifel:${debug},debug_logs,${models_dir:}}/${name}
+    subdir: ${hydra.job.override_dirname}/run_${now:%Y-%m-%d_%H-%M-%S}

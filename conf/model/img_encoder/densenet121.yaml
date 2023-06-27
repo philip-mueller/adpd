@@ -1,0 +1,12 @@
+defaults:
+  - TimmConvModel
+
+backbone: densenet121
+use_pretrained_backbone: true
+dilation: false
+frozen_backbone: false
+
+n_projection_layers: 1
+backbone_dropout: 0.0
+backbone_drop_path: 0.0
+projection_bn: false

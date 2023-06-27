@@ -1,0 +1,16 @@
+
+defaults:
+  - observation_sets@nih9.observation_sets: nih8
+  - reported_observation_groups@nih9.reported_observation_groups:
+    - nih8
+    - nih8_cig
+
+nih9:
+  name: nih_cxr
+
+  pixel_mean: [0.505]
+  pixel_std: [0.248] 
+
+  load_anatomy_boxes: false
+  load_observation_classes: true
+  load_observation_boxes: true

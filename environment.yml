@@ -1,0 +1,40 @@
+
+name: adpd
+channels:
+  - pytorch
+  - huggingface
+  - conda-forge
+  - pyg
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pip
+  - pylint
+
+  - IPython
+  - ipykernel
+  - matplotlib
+  - numpy
+  - pytorch=1.12.0
+  - pyg
+  - torchvision
+  - torchmetrics
+  - cudatoolkit=11.3
+  - matplotlib
+  - jupyter
+  - tqdm
+  - timm
+  - einops
+  - kaggle
+  - wandb
+
+  - pip:
+    - transformers
+    - tokenizers
+    - hydra-core
+    - omegaconf
+    - albumentations
+    - git+https://github.com/bes-dev/mean_average_precision.git
+    - deepdiff
+    - ensemble-boxes

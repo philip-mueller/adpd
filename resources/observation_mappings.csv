@@ -1,0 +1,9 @@
+source_name,target_name
+nih/Atelectasis,cig_anatomicalfinding/atelectasis
+nih/Cardiomegaly,cig_anatomicalfinding/enlarged cardiac silhouette
+nih/Effusion,cig_anatomicalfinding/pleural effusion
+nih/Infiltration,cig_anatomicalfinding/infiltration;cig_anatomicalfinding/lung opacity
+nih/Mass,cig_anatomicalfinding/mass/nodule (not otherwise specified);cig_anatomicalfinding/multiple masses/nodules
+nih/Nodule,cig_anatomicalfinding/mass/nodule (not otherwise specified)
+nih/Pneumonia,cig_disease/pneumonia
+nih/Pneumothorax,cig_anatomicalfinding/Pneumothorax

@@ -1,0 +1,18 @@
+- observation_set_name: nih
+  observation_names: 
+  - Atelectasis
+  - Cardiomegaly
+  #- Consolidation
+  #- Edema
+  - Effusion
+  #- Emphysema
+  #- Fibrosis
+  #- Hernia
+  - Infiltration
+  - Mass
+  - Nodule
+  #- Pleural_Thickening
+  - Pneumonia
+  - Pneumothorax
+
+  has_bboxes: true

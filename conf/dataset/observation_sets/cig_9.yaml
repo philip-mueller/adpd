@@ -1,0 +1,22 @@
+- observation_set_name: cig_anatomicalfinding
+  anatomy_observation_set_name: anat_anatomicalfinding
+  observation_names: 
+  - lung opacity
+  - pleural effusion
+  - atelectasis
+  - enlarged cardiac silhouette
+  - pulmonary edema/hazy opacity
+  - pneumothorax
+  - consolidation
+
+  has_bboxes: false
+  has_anatomy_observations: true
+
+- observation_set_name: cig_disease
+  anatomy_observation_set_name: anat_disease
+  observation_names: 
+  - fluid overload/heart failure
+  - pneumonia
+
+  has_bboxes: false
+  has_anatomy_observations: true

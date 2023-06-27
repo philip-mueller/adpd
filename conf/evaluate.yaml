@@ -1,0 +1,30 @@
+defaults:
+  - EvaluationConfig
+  - /dataset@eval_datasets: 
+    - nih8_bboxes
+  - _self_  # allows configs defined in this file to be overwritten by experiment
+
+update_wandb: true
+
+num_workers: ${oc.env:NUM_WORKERS,10}
+prefetch: ${oc.env:IMG_PREFETCH,false}
+device: cuda
+debug: false
+seed: 42
+run_name: null  # i.e. run_2022-09-01_10-39-05
+
+eval_mode: test
+
+hydra:
+  job:
+    name: eval_${now:%Y-%m-%d_%H-%M-%S}
+    config:
+      override_dirname:
+        exclude_keys: [experiment, model_name, gpu, eval_prefix, dataset, dataset.name, dataset_type, prefetch, num_workers]
+
+  run:
+    dir: ${ifel:${debug},debug_logs,${models_dir:}}/${model_name}/eval_${now:%Y-%m-%d_%H-%M-%S}
+
+  sweep:
+    dir: ${models_dir:}/${model_name}/evals
+    subdir: eval_${now:%Y-%m-%d_%H-%M-%S}

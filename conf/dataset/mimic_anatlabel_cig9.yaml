@@ -1,0 +1,17 @@
+
+defaults:
+  - anatomy_names@mimic_cig9.anatomy_names: cig_default
+  - observation_sets@mimic_cig9.observation_sets: cig_9
+  - reported_observation_groups@mimic_cig9.reported_observation_groups:
+    - cig9
+
+mimic_cig9:
+  name: mimic_cxr-frontal-chexpert-cig_labels-cig_anatlabels-cig_anatboxes-cig_nogoldleak-mscxr_exclude
+
+  pixel_mean: [0.505]
+  pixel_std: [0.248] 
+
+  load_anatomy_boxes: true
+  load_observation_classes: true
+  load_anatomy_observations: true
+
