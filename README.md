@@ -1,9 +1,28 @@
 # Anatomy-Driven Pathology Detection on Chest X-rays
+This is the official PyTorch implementation of ADPD (MICCAI 2023).
 
-Pathology detection enables the automatic interpretation of medical scans such as chest X-rays while providing a high level of explainability to support radiologists in making informed decisions.
+**[[Paper - arXiv:2404.15770]](https://arxiv.org/abs/2309.02578) | [[Paper - MICCAI 2023]](https://conferences.miccai.org/2023/papers/064-Paper0383.html) | [[DOI: 10.1007/978-3-031-43907-0_6]](https://doi.org/10.1007/978-3-031-43907-0_6)**
+
+> **Anatomy-Driven Pathology Detection on Chest X-rays (MICCAI 2023)** <br>
+> Philip Müller, Felix Meissen, Johannes Brandt, Georgios Kaissis, Daniel Rueckert <br>
+
+<p align="center">
+<img src="results/adpd_overview.png" width=80% height=80%
+class="center">
+</p>
+
+> **Abstract:** Pathology detection enables the automatic interpretation of medical scans such as chest X-rays while providing a high level of explainability to support radiologists in making informed decisions.
 However, annotating pathology bounding boxes is a time-consuming task such that large public datasets for this purpose are scarce. Current approaches thus use weakly supervised object detection to learn the (rough) localization of pathologies from image-level annotations, which is however limited in performance due to the lack of bounding box supervision. 
 We, therefore, propose  anatomy-driven pathology detection (ADPD), which uses easy-to-annotate bounding boxes of anatomical regions as proxies for pathologies. 
 We study two training approaches: supervised training using anatomy-level pathology labels and multiple instance learning with image-level pathology labels. Our results show that our anatomy-level training approach outperforms weakly supervised methods and fully supervised detection with limited training samples, and our MIL approach is competitive with both baseline approaches, therefore demonstrating the potential of our approach.
+
+
+## Outline
+
+1. [Setup](#setup)
+2. [Training and Evaluation](#training-and-evaluation)
+3. [Results](#results)
+4. [Citation](#citation)
 
 ## Setup
 You do not have to manually download any datasets, this will be done automatically. Just make sure you have a Physionet user with credentialed access to the relevant datasets (the dataset links will be prompted when you start training for the first time) and a Kaggle account. Then follow these steps:
@@ -61,4 +80,20 @@ or to overwrite the number of decoder layers you can run
 
 
 ## Results
-![Results](results/results.png)
+<p align="center">
+<img src="results/results.png" width=80% height=80%
+class="center">
+</p>
+
+
+## Citation
+```
+@inproceedings{mueller2023adpd,
+  title = {Anatomy-Driven Pathology Detection on Chest X-rays},
+  author = {M{\"u}ller, Philip and Meissen, Felix and Brandt, Johannes and Kaissis, Georgios and Rueckert, Daniel},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention -- MICCAI 2023},
+  doi={10.1007/978-3-031-43907-0_6},
+  year={2023},
+  pages = {57--66},
+}
+```
