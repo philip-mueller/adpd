@@ -1,7 +1,7 @@
 # Anatomy-Driven Pathology Detection on Chest X-rays
 This is the official PyTorch implementation of ADPD (MICCAI 2023).
 
-**[[Paper - arXiv:2404.15770]](https://arxiv.org/abs/2309.02578) | [[Paper - MICCAI 2023]](https://conferences.miccai.org/2023/papers/064-Paper0383.html) | [[DOI: 10.1007/978-3-031-43907-0_6]](https://doi.org/10.1007/978-3-031-43907-0_6)**
+**[[Paper - arXiv:2309.02578]](https://arxiv.org/abs/2309.02578) | [[Paper - MICCAI 2023]](https://conferences.miccai.org/2023/papers/064-Paper0383.html) | [[DOI: 10.1007/978-3-031-43907-0_6]](https://doi.org/10.1007/978-3-031-43907-0_6)**
 
 > **Anatomy-Driven Pathology Detection on Chest X-rays (MICCAI 2023)** <br>
 > Philip Müller, Felix Meissen, Johannes Brandt, Georgios Kaissis, Daniel Rueckert <br>
